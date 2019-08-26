@@ -7,10 +7,15 @@ while len(numbers) < 25:
         print('only numbers between 1 and 24 are acceptable')
     else:
         z = float(input('How many days per year? '))
-        a = float(input('Taxes are how much percent of your income? '))
-        answer = (a/100)
-        result = (number * y * z)
-        mpy = ('Dollars')
-        print(result - answer * result, mpy)
-        exit()
-        
+        qwerty = input('Do you pay taxes? ').lower()
+        if 'yes'.startswith(qwerty.lower()):
+            a = float(input('Taxes are how much percent of your income? '))
+            answer = (a/100)
+            result = (number * y * z)
+            mpy = 'Dollars'
+            print(result - answer * result, mpy)
+        else:
+            result = (number * y * z)
+            mpy = 'Dollars'
+            print(result, mpy)
+       
